@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JsBeater - Play from mic</title>
+
+	<style type="text/css">
+		h1 {
+			color: #000;
+			padding: 0;
+			margin: 0;
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+
+	<script src="../jsbeater.js"></script>
+</head>
+<body>
+
+	<h1 id="talkText">muted</h1>
+	
+	<script>
+		var isTalking = false;
+		var talkNode;
+
+		window.onload = () => {
+			talkNode = document.getElementById("talkText")
+			if(!talkNode) {
+				return 
+			}
+
+			jsbMic(talk, 180)
+		}
+
+		function talk() {
+			if(!isTalking) {
+				talkNode.innerHTML = "Talking"
+				isTalking = true
+				setTimeout(() => { talkNode.innerHTML = "Muted"; isTalking = false; }, 600)
+			}
+		}
+	</script>
+</body>
+</html>
