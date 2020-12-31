@@ -1,3 +1,10 @@
+/* 
+* JS-Beater
+* Interact with audio file or microphone from your browser
+*
+* https://github.com/alexzava/js-beater
+*/
+
 function jsbFile(songFile, callback, t = 240) {
 	const audioCtx = new AudioContext()
 	const audioEle = new Audio()

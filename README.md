@@ -1,6 +1,8 @@
-# JS-Beater
+# [JS-Beater](https://github.com/alexzava/js-beater)
 
-Interact with audio file or microphone from your browser
+Interact with audio file or microphone from your browser.
+
+Try the [demo here](https://alexzava.com/js-beater/examples/playFromMic.html)
 
 ## How to use
 
